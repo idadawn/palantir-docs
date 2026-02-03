@@ -1,9 +1,16 @@
 [build]
-  # 构建命令（Netlify 推荐使用 npm）
-  command = "npm run build"
+  # 构建命令
+  command = "pnpm run build"
   
   # 构建输出目录
   publish = "dist/public"
+
+# 构建设置
+[build.environment]
+  # 使用 pnpm
+  NPM_FLAGS = "--version"
+  # Node 版本
+  NODE_VERSION = "20"
 
 # SPA 路由配置 - 所有路由都返回 index.html
 [[redirects]]
