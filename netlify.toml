@@ -1,0 +1,19 @@
+[build]
+  # 构建命令
+  command = "npm install -g pnpm && pnpm install && pnpm run build"
+  
+  # 构建输出目录（Vite 默认输出到 dist/public）
+  publish = "dist/public"
+
+# SPA 路由配置 - 所有路由都返回 index.html
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# 可选：自定义域名或 HTTPS 配置
+# [[headers]]
+#   for = "/*"
+#   [headers.values]
+#     X-Frame-Options = "SAMEORIGIN"
+#     X-XSS-Protection = "1; mode=block"
